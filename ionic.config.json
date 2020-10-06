@@ -1,0 +1,7 @@
+{
+  "name": "speechrecognition",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

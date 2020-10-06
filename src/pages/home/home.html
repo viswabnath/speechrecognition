@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Speech Recognition
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content align="center">
+  <p style="text-transform:uppercase">   Is Listening : {{ isListening }}</p>
+  <!-- <button ion-button (click)="getPermission()">Get Permission</button> -->
+  <button ion-button (click)="listen()" round>
+    <div>
+      <ion-icon name="mic">
+        <!-- <label text-uppercase>Speak to me</label> -->
+      </ion-icon>
+    </div>
+  </button>
+
+  <ion-card>
+    <ion-card-content *ngFor="let match of matches">
+      <p>{{ match }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-row  *ngIf="imageText">
+    <button ion-button (tap)="speak();">
+        <ion-icon md="ios-mic" style="margin-right:1rem"></ion-icon> Speak
+      </button>
+</ion-row>
+
+</ion-content>
